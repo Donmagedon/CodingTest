@@ -1,0 +1,19 @@
+{
+  "name": "codetest",
+  "version": "1.0.0",
+  "description": "Luiscar Castro technical test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Donmagedon/CodingTest.git"
+  },
+  "author": "Luiscar Castro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Donmagedon/CodingTest/issues"
+  },
+  "homepage": "https://github.com/Donmagedon/CodingTest#readme"
+}

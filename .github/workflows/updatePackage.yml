@@ -1,0 +1,11 @@
+name: Update the package.json file
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  update:
+   runs-on: ubuntu_latest
+   steps:
+     - run: hola!
