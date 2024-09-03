@@ -3,11 +3,38 @@ name: Update the package.json file
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   update_package:
     runs-on: ubuntu-latest  
     steps:
-      - name: send message
-        run: echo "hola!"
+      - name: Initial Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node Environment
+        uses: actions/setup@node-v2
+        with:
+          node-version: 14
+
+
+      - name: Send message
+        run: echo "Initilazing..."
+
+      - name: Update version
+        run: |         
+         echo updating...
+         
+         npm version patch -m "patching program"
+
+         git push
+      
+      - name: Commit changes
+        run: | 
+     
+         git add package.json
+         
+         git commit -m "adding updated package.json file"
+
+         git push
+       
