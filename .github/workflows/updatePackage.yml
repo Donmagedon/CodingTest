@@ -6,8 +6,8 @@ on:
       - main
 
 jobs:
-  update:
-   runs-on: ubuntu_latest
-   steps:
+  update_package:
+    runs-on: ubuntu_latest
+    steps:
      - name: send message
        run: echo hola!
