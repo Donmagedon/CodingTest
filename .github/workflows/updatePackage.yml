@@ -8,4 +8,5 @@ jobs:
   update:
    runs-on: ubuntu_latest
    steps:
-     - run: hola!
+     - name: send message
+       run: echo hola!
