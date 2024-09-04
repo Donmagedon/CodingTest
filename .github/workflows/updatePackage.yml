@@ -24,6 +24,12 @@ jobs:
          git config --global user.name "Luiscar Castro"
 
          git config --global user.email "luiscarcastro333@gmail.com"
+
+      - name: Initialize right branch and pull current version
+        run: |
+         git checkout dev
+         git pull origin dev
+
          
       - name: Send message
         run: echo "Initilazing..."
