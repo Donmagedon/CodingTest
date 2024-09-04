@@ -25,7 +25,7 @@ jobs:
          MESSAGE=$(git log -1 --pretty=format:"%s")
          AUTHOR=$(git log -1 --pretty=format:"%an")
          DATE=$(git log -1 --pretty=format:"%ad")
-         HEAD=$(git log -1 --short --pretty=format:"%H")
+         HEAD=$(git log -1 --pretty=format:"%H")
          echo "MESSAGE=$MESSAGE" >> $GITHUB_ENV
          echo "AUTHOR=$AUTHOR" >> $GITHUB_ENV
          echo "DATE=$DATE" >> $GITHUB_ENV
