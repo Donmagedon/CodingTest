@@ -43,7 +43,7 @@ jobs:
          
          git commit -m "adding updated package.json file"
 
-         git push
+         git push origin dev
       
         env: 
          GITHUB_TOKEN: ${{secrets.PAT}}
