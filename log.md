@@ -18,3 +18,8 @@
 ### Author: donmagedon
 ### Fixes: make server ip public
 ### Release date: Wed Sep 4 01:10:39 2024 -0500
+
+## Version Update: eade2cca398fe1b65003e5c3c94f9164d0b032ed
+### Author: donmagedon
+### Fixes: testing API
+### Release date: Wed Sep 4 01:40:25 2024 -0500
