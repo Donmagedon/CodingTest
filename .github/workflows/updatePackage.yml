@@ -36,9 +36,7 @@ jobs:
       - name: Update version
         run: |         
          echo updating...
-         npm version patch -m "patching program"
-         git add package.json
-         git commit -m "adding updated package.json file"
+         npm version patch -m "ci: bump version to %s"
          git push origin dev
       
         env: 
