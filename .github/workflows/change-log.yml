@@ -26,10 +26,10 @@ jobs:
          AUTHOR=$(git log -1 --pretty=format:"%an")
          DATE=$(git log -1 --pretty=format:"%ad")
          HEAD=$(git rev-parse --short head)
-         echo "MESSAGE=$MESSAGE" >> $GITHUB.ENV
-         echo "AUTHOR=$AUTHOR" >> $GITHUB.ENV
-         echo "DATE=$DATE" >> $GITHUB.ENV
-         echo "HEAD=$HEAD" >> $GITHUB.ENV
+         echo "MESSAGE=$MESSAGE" >> $GITHUB_ENV
+         echo "AUTHOR=$AUTHOR" >> $GITHUB_ENV
+         echo "DATE=$DATE" >> $GITHUB_ENV
+         echo "HEAD=$HEAD" >> $GITHUB_ENV
       - name: Update MD file
         run: |
          eco -e "\n## Version Update: $HEAD\n###Author: $AUTHOR\n### Fixes: $MESSAGE\n###Release date: $DATE" >> log.md
@@ -50,9 +50,8 @@ jobs:
          git commit -m "update md file"
          git push origin dev
 
-
-        env: 
-         GITHUB_TOKEN: ${{secrets.PAT}}
+env: 
+  GITHUB_TOKEN: ${{secrets.PAT}}
 
 
 
