@@ -1,7 +1,7 @@
 name: Update the package.json file
 
 permissions: 
- contents: write
+  contents: write
 
 on:
   push:
@@ -11,6 +11,7 @@ on:
 jobs:
   update_package:
     runs-on: ubuntu-latest  
+
     steps:
       - name: Initial Checkout
         uses: actions/checkout@v4
@@ -19,35 +20,21 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
-      - name: Set user
+
+      - name: Set Git user
         run: |         
-         git config --global user.name "Luiscar Castro"
+          git config --global user.name "Luiscar Castro"
+          git config --global user.email "luiscarcastro333@gmail.com"
 
-         git config --global user.email "luiscarcastro333@gmail.com"
-
-      - name: Initialize right branch and pull current version
+      - name: Initialize branch and pull current version
         run: |
-         git checkout dev
-         git pull origin dev
+          git checkout dev
+          git pull origin dev
 
-         
-      - name: Send message
-        run: echo "Initilazing..."
-
-      - name: Update version
+      - name: Update version and push
         run: |         
-         echo updating...
-         
-         npm version patch -m "patching program"
-      
-      - name: Commit changes
-        run: | 
-
-         git add package.json
-         
-         git commit -m "adding updated package.json file"
-
-         git push origin dev
-      
+          echo "Updating version..."
+          npm version patch -m "ci: bump version to %s"
+          git push origin dev
         env: 
-         GITHUB_TOKEN: ${{secrets.PAT}}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
