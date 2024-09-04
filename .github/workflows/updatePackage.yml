@@ -39,8 +39,6 @@ jobs:
          echo updating...
          
          npm version patch -m "patching program"
-
-         git push origin dev
       
       - name: Commit changes
         run: | 
