@@ -1,6 +1,6 @@
 {
   "name": "codetest",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Luiscar Castro technical test",
   "main": "index.js",
   "scripts": {
