@@ -1,5 +1,8 @@
 name: Update the package.json file
 
+permissions: 
+ contents: write
+
 on:
   push:
     branches:
@@ -16,8 +19,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
+      - name: Set user
+        run: |         
+         git config --global user.name "Luiscar Castro"
 
-
+         git config --global user.email "luiscarcastro333@gmail.com"
+         
       - name: Send message
         run: echo "Initilazing..."
 
@@ -32,13 +39,11 @@ jobs:
       - name: Commit changes
         run: | 
 
-         git config --global user.name "Luiscar Castro"
-
-         git config --global user.email "luiscarcastro333@gmail.com"
-         
          git add package.json
          
          git commit -m "adding updated package.json file"
 
-         git push
-       
+         git push origin dev
+      
+        env: 
+         GITHUB_TOKEN: ${{secrets.PAT}}
