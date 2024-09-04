@@ -1,17 +1,19 @@
-async function getVersion(){
-    const URI = "http://localhost:5500"
+const displayVersionEl = document.getElementById("display")
+async function getPackageJSON(){
+    const URI = "https://codingtest-2ve2.onrender.com"
     try {
-        const request = await fetch(URI,{
+        const request =  await fetch(URI,{
             method:"GET",
             headers:{
                 "Content-Type":"application/json"
             }
         })
-        return request.json()
+        return  request.json()
     } catch (error) {
         throw new Error(error)
     }
 }
 window.addEventListener("load",async (e)=>{
-    console.log(await getVersion())
+    const packageObj = await  getPackageJSON()
+    displayVersionEl.innerText = packageObj.version
 })
