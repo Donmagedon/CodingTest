@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Donmagedon/CodingTest/issues"
   },
-  "homepage": "https://github.com/Donmagedon/CodingTest#readme"
+  "homepage": "https://github.com/Donmagedon/CodingTest#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
