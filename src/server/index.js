@@ -3,7 +3,7 @@ const app = express()
 const path = require("path")
 const fs = require("fs")
 const ENTRY_POINT = 5500
-const JSON_FILE = path.join(__dirname,"../../package.json")
+const index = path.join(__dirname,"../index.html")
 
 app.use((req,res,next)=>{    
     res.setHeader("Access-Control-Allow-Origin","*")
@@ -13,7 +13,7 @@ app.use((req,res,next)=>{
     next()    
   })
 app.use("/",(req,res,next)=>{
-    res.sendFile(JSON_FILE)
+    res.sendFile(index)
 })
 
 app.listen(ENTRY_POINT,"0.0.0.0",()=>{
