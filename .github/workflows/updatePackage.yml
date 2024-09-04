@@ -34,7 +34,7 @@ jobs:
          
          npm version patch -m "patching program"
 
-         git push
+         git push origin dev
       
       - name: Commit changes
         run: | 
