@@ -22,8 +22,13 @@ jobs:
       - name: Set user
         run: |         
          git config --global user.name "Luiscar Castro"
-
          git config --global user.email "luiscarcastro333@gmail.com"
+
+      - name: Initialize  branch and pull current version
+        run: |
+         git checkout dev
+         git pull origin dev
+
          
       - name: Send message
         run: echo "Initilazing..."
@@ -31,18 +36,7 @@ jobs:
       - name: Update version
         run: |         
          echo updating...
-         
-         npm version patch -m "patching program"
-
-         git push
-      
-      - name: Commit changes
-        run: | 
-
-         git add package.json
-         
-         git commit -m "adding updated package.json file"
-
+         npm version patch -m "Version bump to %s"
          git push origin dev
       
         env: 
