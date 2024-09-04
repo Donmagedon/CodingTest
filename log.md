@@ -13,3 +13,8 @@
 ### Author: donmagedon
 ### Fixes: Merge branch 'dev' of https://github.com/Donmagedon/CodingTest into dev
 ### Release date: Wed Sep 4 00:54:12 2024 -0500
+
+## Version Update: 77ca5d470bf95c87c4417e3855457ef6bc4328e5
+### Author: donmagedon
+### Fixes: make server ip public
+### Release date: Wed Sep 4 01:10:39 2024 -0500
