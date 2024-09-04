@@ -25,14 +25,14 @@ jobs:
          MESSAGE=$(git log -1 --pretty=format:"%s")
          AUTHOR=$(git log -1 --pretty=format:"%an")
          DATE=$(git log -1 --pretty=format:"%ad")
-         HEAD=$(git rev-parse --short head)
+         HEAD=$(git log -1 --pretty=format:"%H")
          echo "MESSAGE=$MESSAGE" >> $GITHUB_ENV
          echo "AUTHOR=$AUTHOR" >> $GITHUB_ENV
          echo "DATE=$DATE" >> $GITHUB_ENV
          echo "HEAD=$HEAD" >> $GITHUB_ENV
       - name: Update MD file
         run: |
-         eco -e "\n## Version Update: $HEAD\n###Author: $AUTHOR\n### Fixes: $MESSAGE\n###Release date: $DATE" >> log.md
+         echo -e "\n## Version Update: $HEAD\n###Author: $AUTHOR\n### Fixes: $MESSAGE\n###Release date: $DATE" >> log.md
      
       - name: Initialize user
         run: |
