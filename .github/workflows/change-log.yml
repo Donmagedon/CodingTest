@@ -1,0 +1,61 @@
+name: Create changelog file
+
+permissions: 
+ contents: write
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  update_package:
+    runs-on: ubuntu-latest  
+    steps:
+      - name: Initial Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node Environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      
+      - name: Save PR details
+        run: |
+         MESSAGE=$(git log -1 --pretty-format="%s")
+         AUTHOR=$(git log -1 --pretty-format="%an")
+         DATE=$(git log -1 --pretty-format="%ad")
+         HEAD=$(git reverse-parse --short head)
+         echo "MESSAGE=$MESSAGE" >> $GITHUB.ENV
+         echo "AUTHOR=$AUTHOR" >> $GITHUB.ENV
+         echo "DATE=$DATE" >> $GITHUB.ENV
+         echo "HEAD=$HEAD" >> $GITHUB.ENV
+      - name: Update MD file
+        run: |
+         eco -e "\n## Version Update: $HEAD\n###Author: $AUTHOR\n### Fixes: $MESSAGE\n###Release date: $DATE" >> log.md
+     
+      - name: Initialize user
+        run: |
+         git config --global user.name "Luiscar Castro"
+         git config --global user.email "luiscarcastro333@gmail.com"
+
+      - name: Switch branch and pull version
+        run: |
+         git checkout dev
+         git pull origin dev
+
+      - name: Commit Changes
+        run: |
+         git add log.md
+         git commit -m "update md file"
+         git push origin dev
+
+
+        env: 
+         GITHUB_TOKEN: ${{secrets.PAT}}
+
+
+
+
+
+           
