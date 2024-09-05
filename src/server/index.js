@@ -12,10 +12,11 @@ app.use((req,res,next)=>{
     res.setHeader('Access-Control-Allow-Credentials', true);
     next()    
   })
-app.use("/",(req,res,next)=>{
+app.use(express.static(path.join(__dirname,"../public")))
+app.get("/api/v1",(req,res,next)=>{
     res.sendFile(JSON_FILE)
 })
 
-app.listen(ENTRY_POINT,"0.0.0.0",()=>{
+app.listen(ENTRY_POINT,()=>{
     console.log("connected succesfully!")
 })
