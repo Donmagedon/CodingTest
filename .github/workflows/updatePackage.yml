@@ -27,7 +27,7 @@ jobs:
       - name: Initialize  branch and pull current version
         run: |
          git checkout dev
-         git pull -- rebase origin dev
+         git pull --rebase origin dev
 
          
       - name: Send message
