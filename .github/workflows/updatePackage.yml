@@ -26,6 +26,7 @@ jobs:
 
       - name: Initialize  branch and pull current version
         run: |
+         git fetch origin
          git checkout dev
          git pull --rebase origin dev
 
