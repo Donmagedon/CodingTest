@@ -28,3 +28,8 @@
 ### Author: donmagedon
 ### Fixes: adding readme
 ### Release date: Thu Sep 5 00:05:23 2024 -0500
+
+## Version Update: be672225b63f41070916770acf16701308522ab8
+### Author: Luiscar Castro
+### Fixes: Update README.MD
+### Release date: Thu Sep 5 08:43:31 2024 -0500
