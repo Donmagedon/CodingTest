@@ -1,6 +1,6 @@
 const displayVersionEl = document.getElementById("display")
 async function getPackageJSON(){
-    const URI = "https://codingtest-2ve2.onrender.com"
+    const URI = "https://codingtest-2ve2.onrender.com/api/v1"
     try {
         const request =  await fetch(URI,{
             method:"GET",

@@ -30,6 +30,12 @@ jobs:
          echo "AUTHOR=$AUTHOR" >> $GITHUB_ENV
          echo "DATE=$DATE" >> $GITHUB_ENV
          echo "HEAD=$HEAD" >> $GITHUB_ENV
+
+      - name: Switch branch and pull version
+        run: |
+         git checkout dev
+         git pull --rebase origin dev
+
       - name: Update MD file
         run: |
          echo -e "\n## Version Update: $HEAD\n### Author: $AUTHOR\n### Fixes: $MESSAGE\n### Release date: $DATE" >> log.md
@@ -39,10 +45,7 @@ jobs:
          git config --global user.name "Luiscar Castro"
          git config --global user.email "luiscarcastro333@gmail.com"
 
-      - name: Switch branch and pull version
-        run: |
-         git checkout dev
-         git pull origin dev
+
 
       - name: Commit Changes
         run: |

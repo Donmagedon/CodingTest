@@ -53,3 +53,23 @@
 ### Author: donmagedon
 ### Fixes: adding span
 ### Release date: Wed Sep 4 20:04:28 2024 -0500
+
+## Version Update: f1b9134b0237e4a01bc47b546c473bd47dfb593e
+### Author: donmagedon
+### Fixes: testing action to redeploy
+### Release date: Wed Sep 4 20:55:49 2024 -0500
+
+## Version Update: b04270586c846d64d322afa70f2038b3e4f82cd6
+### Author: donmagedon
+### Fixes: second test of redeply action
+### Release date: Wed Sep 4 21:00:50 2024 -0500
+
+## Version Update: 0fe42ffbd2bfab04997008729e200ca7587f07df
+### Author: donmagedon
+### Fixes: adding another p element
+### Release date: Wed Sep 4 21:09:51 2024 -0500
+
+## Version Update: 68cc380dd11afd560674fe8b73bdf5f216451599
+### Author: donmagedon
+### Fixes: Added style to landing page, added static serving to node app
+### Release date: Wed Sep 4 21:58:53 2024 -0500
