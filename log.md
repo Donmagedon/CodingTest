@@ -13,3 +13,8 @@
 ### Author: donmagedon
 ### Fixes: action bug testing
 ### Release date: Wed Sep 4 23:21:08 2024 -0500
+
+## Version Update: 58680065f21e6df080505e8c50d7a2ff3469756b
+### Author: donmagedon
+### Fixes: refactor redeply script
+### Release date: Wed Sep 4 23:31:49 2024 -0500
