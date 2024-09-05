@@ -38,3 +38,13 @@
 ### Author: donmagedon
 ### Fixes: testing host
 ### Release date: Wed Sep 4 08:44:36 2024 -0500
+
+## Version Update: 670544fbae2735028c27e0fc1498787219acd5fe
+### Author: donmagedon
+### Fixes: Merge branch 'dev' of https://github.com/Donmagedon/CodingTest into dev
+### Release date: Wed Sep 4 19:43:41 2024 -0500
+
+## Version Update: 012ddbe64de0663b4db0214eacb28a7e877a098a
+### Author: donmagedon
+### Fixes: Merge branch 'dev' of https://github.com/Donmagedon/CodingTest into dev
+### Release date: Wed Sep 4 19:49:04 2024 -0500
