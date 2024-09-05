@@ -68,3 +68,8 @@
 ### Author: donmagedon
 ### Fixes: adding another p element
 ### Release date: Wed Sep 4 21:09:51 2024 -0500
+
+## Version Update: 68cc380dd11afd560674fe8b73bdf5f216451599
+### Author: donmagedon
+### Fixes: Added style to landing page, added static serving to node app
+### Release date: Wed Sep 4 21:58:53 2024 -0500
