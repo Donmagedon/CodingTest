@@ -23,3 +23,8 @@
 ### Author: donmagedon
 ### Fixes: Merge branch 'dev' of https://github.com/Donmagedon/CodingTest into dev
 ### Release date: Wed Sep 4 23:35:25 2024 -0500
+
+## Version Update: 0289178115d34a28b79b402e61c6fd3e2c2ee3dc
+### Author: donmagedon
+### Fixes: adding readme
+### Release date: Thu Sep 5 00:05:23 2024 -0500
