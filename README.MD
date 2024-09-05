@@ -1,3 +1,8 @@
+#Request access
+-Fork the repository to your account and then pull the changes
+or
+-Send me an email to grant you write access:)
+
 # Clone Repository
 - `git clone -b dev --single-branch https://github.com/Donmagedon/CodingTest`
 
