@@ -17,6 +17,6 @@ app.get("/api/v1",(req,res,next)=>{
     res.sendFile(JSON_FILE)
 })
 
-app.listen(ENTRY_POINT,()=>{
+app.listen(ENTRY_POINT,"0.0.0.0",()=>{
     console.log("connected succesfully!")
 })
