@@ -26,6 +26,7 @@ jobs:
 
       - name: Initialize  branch and pull current version
         run: |
+         git fetch origin
          git checkout dev
          git pull --rebase origin dev
 
@@ -38,6 +39,17 @@ jobs:
          echo updating...
          npm version patch -m "Version bump to %s"
          git push origin dev
-      
-        env: 
-         GITHUB_TOKEN: ${{secrets.PAT}}
+  
+
+      - name: Redeploy Render App
+        env:
+         RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+        run: |
+          curl -X POST \
+          -H "Authorization: Bearer $RENDER_API_KEY" \
+          -H "Content-Type: application/json" \
+          https://api.render.com/v1/services/srv-crbvn7jv2p9s73dkps00/deploys
+    
+
+env: 
+       GITHUB_TOKEN: ${{secrets.PAT}}
